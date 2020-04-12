@@ -18,11 +18,14 @@ pipeline {
           sleep 5
         }     
       }
-        stage('deploy'){
-        steps {
-          echo "deploy war file"
-          build 'contact'
-        }            
-      }
+        post {
+            always {
+            echo "Always display this message"
+                failure {
+                echo "job failed"
+                }
+                
+            }
+        }
     }
 }
