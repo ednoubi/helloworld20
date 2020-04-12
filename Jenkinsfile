@@ -21,13 +21,7 @@ pipeline {
         stage('deploy'){
         steps {
           echo "deploy war file"
-          sleep 10
-        }            
-      }
-        stage('new'){
-        steps {
-          echo "Build New"
-          sleep 10
+          sh 'build project17'
         }            
       }
     }
