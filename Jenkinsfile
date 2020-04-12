@@ -21,7 +21,7 @@ pipeline {
         stage('deploy'){
         steps {
           echo "deploy war file"
-          sh 'build project17'
+          build 'project17'
         }            
       }
     }
