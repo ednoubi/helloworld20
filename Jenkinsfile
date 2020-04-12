@@ -17,7 +17,7 @@ pipeline {
           echo "test step"
           sleep 5
         }     
-      }
+      
         post {
             always {
             echo "Always display this message"
